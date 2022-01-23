@@ -34,6 +34,7 @@ const App = () => {
       <Grow in>
         <Container>
           <Grid
+            className={classes.mobileContainer}
             container
             justifyContent="space-between"
             alignItems="stretch"
