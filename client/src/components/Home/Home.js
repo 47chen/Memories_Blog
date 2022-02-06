@@ -11,7 +11,7 @@ import {
 import { useNavigate, useLocation } from "react-router-dom";
 import ChipInput from "material-ui-chip-input";
 import { useDispatch } from "react-redux";
-import { getPosts } from "../../actions/posts";
+import { getPosts, getPostsBySearch } from "../../actions/posts";
 import Posts from "../Posts/Posts";
 import Form from "../Form/Form";
 import useStyles from "../../styles";
@@ -38,7 +38,7 @@ const Home = () => {
 
   const searchPost = () => {
     if (search.trim()) {
-      //dispatch -> fetch search post // using redux and modify our db to only search for specific posts
+      dispatch(getPostsBySearch({ search, tags: tags.join(",") }));
     } else {
       navigate("/");
     }
