@@ -9,7 +9,7 @@ const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({
     title: "",
     message: "",
-    tags: "",
+    tags: [],
     selectedFile: "",
   });
   const post = useSelector((state) =>
@@ -44,7 +44,7 @@ const Form = ({ currentId, setCurrentId }) => {
     setPostData({
       title: "",
       message: "",
-      tags: "",
+      tags: [],
       selectedFile: "",
     });
   };
