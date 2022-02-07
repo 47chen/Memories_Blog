@@ -26,7 +26,7 @@ const Post = ({ post, setCurrentId }) => {
   const navigate = useNavigate();
 
   const Likes = () => {
-    if (post.likes.length > 0) {
+    if (post.likes?.length > 0) {
       return post.likes.find(
         (like) => like === (user?.result?.googleId || user?.result?._id)
       ) ? (
@@ -53,7 +53,7 @@ const Post = ({ post, setCurrentId }) => {
     );
   };
 
-  const openPost = () => navigate(`/posts/${post._id}`);
+  const openPost = (e) => navigate(`/posts/${post._id}`);
 
   return (
     <Card className={classes.card} raised elevation={6}>
@@ -79,13 +79,16 @@ const Post = ({ post, setCurrentId }) => {
         </div>
         {(user?.result?.googleId === post?.creator ||
           user?.result?._id === post?.creator) && (
-          <div className={classes.overlay2}>
+          <div className={classes.overlay2} name="edit">
             <Button
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrentId(post._id);
+              }}
               style={{ color: "white" }}
               size="small"
-              onClick={() => setCurrentId(post._id)}
             >
-              <MoreHorizIcon fontSize="medium" />
+              <MoreHorizIcon fontSize="default" />
             </Button>
           </div>
         )}
