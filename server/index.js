@@ -16,7 +16,8 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors()); // Avoid CORS request issue
 
 //Every Route start with postRoutes will start with ../posts
-//Each app.use(middleware) is called every time a request is sent to the server. 
+//Each app.use(middleware) is called every time a request is sent to the server.
+//***Backend folder structure to separate the logic and routes.
 app.use("/posts", postRoutes);
 app.use("/users", userRoutes);
 
