@@ -10,9 +10,13 @@ import userRoutes from "./routes/users.js";
 const app = express();
 dotenv.config();
 
+//Middleware that tells express to parse Json
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors());
+app.use(cors()); // Avoid CORS request issue
+
+//Every Route start with postRoutes will start with ../posts
+//Each app.use(middleware) is called every time a request is sent to the server. 
 app.use("/posts", postRoutes);
 app.use("/users", userRoutes);
 
