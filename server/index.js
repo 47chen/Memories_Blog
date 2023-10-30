@@ -22,9 +22,10 @@ app.use("/posts", postRoutes);
 app.use("/users", userRoutes);
 
 const PORT = process.env.PORT || 5001;
+const CONNECT_URL = process.env.CONNECT_URL;
 
 mongoose
-  .connect(process.env.CONNECTION_URL)
+  .connect(CONNECT_URL)
   .then(() =>
     app.listen(PORT, () => console.log(`Server Running on Port ${PORT}`))
   )
