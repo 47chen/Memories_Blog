@@ -122,4 +122,22 @@ export const likePost = async (req, res) => {
   res.json(updatePost);
 };
 
+export const commentPost = async (req, res) => {
+  const { id } = req.params;
+  const { value } = req.body;
+
+  // first fetch the post we want to leave the comment
+  const post = await PostMessage.findById(id);
+
+  // push the value into post.comment array
+  post.comments.push(value);
+  // and also need to update the post in database
+
+  const updatePost = await PostMessage.findByIdAndUpdate(id, post, {
+    new: true,
+  });
+
+  res.json(updatePost);
+};
+
 export default router;
