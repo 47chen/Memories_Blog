@@ -9,6 +9,7 @@ export const CommentSection = ({ post }) => {
   const [comments, setComments] = useState([1, 2, 3, 4, 5]);
   const [comment, setComment] = useState("");
 
+<<<<<<< HEAD
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -17,6 +18,9 @@ export const CommentSection = ({ post }) => {
 
     dispatch(commentPost(finalComment, post._id));
   };
+=======
+  const handleClick = () => {};
+>>>>>>> 2171e5d16c6c1af7c4a92958f9b227ae3b9dfd63
 
   return (
     <div>
@@ -50,7 +54,10 @@ export const CommentSection = ({ post }) => {
             disabled={!comment}
             variant="contained"
             onClick={handleClick}
+<<<<<<< HEAD
             color="primary"
+=======
+>>>>>>> 2171e5d16c6c1af7c4a92958f9b227ae3b9dfd63
           >
             Comment
           </Button>
