@@ -1,5 +1,5 @@
 # Memories_Blog
-# live site : https://jolly-wilson-87b320.netlify.app/posts [currently APIs on Heroku have been crushed due to inactive]
+# live site:https://aesthetic-croissant-8acd08.netlify.app/
 
 # Intro
 ![截圖 2022-02-17 下午4 09 36](https://user-images.githubusercontent.com/44563581/154572424-07e8d477-0f22-4f56-9bfd-04c7cefc32e7.png)
@@ -8,8 +8,8 @@
 
 Using MERN stack to implement a full-stack web application. People can upload interesting images and messages into a post on the website. Also, user can login with Email (JWT) and Google OAuth Authentication to like, edit and delete their posts. When clicking a single post, you can see the post detail and relative recommendate posts with same others posts that have the same tags.
 
-## What is MERN stack?
-MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
+## What is the MERN stack?
+MERN stands for **MongoDB**, **Express**,** React**, **Node**, after the four key technologies that make up the stack.
 *MongoDB - document database
 *Express(.js) - Node.js web framework
 *React(.js) - a client-side JavaScript framework
