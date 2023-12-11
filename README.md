@@ -49,7 +49,7 @@ CONNECTION_URL = "mongodb URL"
 
 ## Features
 
-- Authentication(Login/SignUp) with Google OAuth2.0 and Jason Web Token(JWT)
+- Authentication(Login/SignUp) with *Google OAuth2.0*, and customized email + password through *Json Web Token(JWT)*
 - Create/Read/Update/Delete posts
 - Like posts
 - View other users' posts
