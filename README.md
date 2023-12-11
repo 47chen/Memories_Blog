@@ -35,7 +35,7 @@ Then use the package manager npm to install all needed packages.
 npm install
 ```
 
-## .env example
+## .env-example
 
 ```python
 # You can change your PORT for whatever you want on your local ex.5000
