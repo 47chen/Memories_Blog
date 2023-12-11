@@ -9,7 +9,7 @@ Memories is a full-stack social media web application, where users can add/delet
 ## Content
 
 - [Installation](#Installation)
-- [.env example](#.env-example)
+- [.env-example](#.env-example)
 - [Features](#Features)
 - [Tack Stack](#Tack-Stack)
 - [Database Schema](#Database-Schema)
