@@ -1,38 +1,112 @@
-# Memories_Blog
-# Live-Site - https://655f892c12e90f1675d6c142--merry-crostata-197f9d.netlify.app/posts
+# Memories
 
-# Intro
-![截圖 2022-02-17 下午4 09 36](https://user-images.githubusercontent.com/44563581/154572424-07e8d477-0f22-4f56-9bfd-04c7cefc32e7.png)
-![截圖 2022-02-17 下午4 22 12](https://user-images.githubusercontent.com/44563581/154572909-aa568a56-bda4-45e1-bae8-e996e4f707e7.png)
+Memories is a full-stack social media web application, where users can add/delete/update/like the posts and view others' posts.
 
+## Link
 
-Using MERN stack to implement a full-stack web application. People can upload interesting images and messages into a post on the website. Also, user can login with Email (JWT) and Google OAuth Authentication to like, edit and delete their posts. When clicking a single post, you can see the post detail and relative recommendate posts with same others posts that have the same tags.
+[Memories Live Site](https://655f892c12e90f1675d6c142--merry-crostata-197f9d.netlify.app/posts) currently deployed on Netlify.
 
-## What is the MERN stack?
-MERN stands for **MongoDB**, **Express**,** React**, **Node**, after the four key technologies that make up the stack.
-*MongoDB - document database
-*Express(.js) - Node.js web framework
-*React(.js) - a client-side JavaScript framework
-*Node(.js) - the premier JavaScript web server
+## Content
 
-## How does MERN stack work?
-The MERN architecture allows you to easily construct a 3-tier architecture (frontend, backend, database) entirely using JavaScript and JSON.
-![截圖 2022-02-17 下午4 17 14](https://user-images.githubusercontent.com/44563581/154572389-c49710f2-cf6d-4863-8e1d-954bd9fc2118.png)
+- [Installation](#Installation)
+- [.env example](#.env-example)
+- [Features](#Features)
+- [Tack Stack](#Tack-Stack)
+- [Database Schema](#Database-Schema)
 
-**React.js Front End**
+## Installation
 
-The top tier of the MERN stack is React.js, the declarative JavaScript framework for creating dynamic client-side applications in HTML. React lets you build up complex interfaces through simple Components, connect them to data on your backend server, and render them as HTML.
+Clone the repo from the following command
 
-React’s strong suit is handling stateful, data-driven interfaces with minimal code and minimal pain, and it has all the bells and whistles you’d expect from a modern web framework: great support for forms, error handling, events, lists, and more.
+```bash
+git clone https://github.com/47chen/Memories_Blog.git
+```
 
-**Express.js and Node.js Server Tier**
+Direct to client folder and server folder to install needed packages.
 
-The next level down is the Express.js server-side framework, running inside a Node.js server. Express.js bills itself as a “fast, unopinionated, minimalist web framework for Node.js,” and that is indeed exactly what it is. Express.js has powerful models for URL routing (matching an incoming URL with a server function), and handling HTTP requests and responses.
+```bash
+cd client
+cd server
+```
 
-By making XML HTTP Requests (XHRs) or GETs or POSTs from your React.js front-end, you can connect to Express.js functions that power your application. Those functions in turn use MongoDB’s Node.js drivers, either via callbacks for using Promises, to access and update data in your MongoDB database.
+Then use the package manager npm to install all needed packages.
 
-**MongoDB Database Tier**
+```bash
+npm install
+```
 
-If your application stores any data (user profiles, content, comments, uploads, events, etc.), then you’re going to want a database that’s just as easy to work with as React, Express, and Node.
+## .env example
 
-That’s where MongoDB comes in: JSON documents created in your React.js front end can be sent to the Express.js server, where they can be processed and (assuming they’re valid) stored directly in MongoDB for later retrieval. Again, if you’re building in the cloud, you’ll want to look at Atlas. If you’re looking to set up your own MERN stack, read on!
+```python
+# You can change your PORT for whatever you want on your local ex.5000
+# If you are going to deploy your server on the cloud ex. AWS EC2 / Heroku
+# Remember to change the port here
+PORT = "PORT"
+
+# Place your MondoDB connect URL here
+CONNECTION_URL = "mongodb URL"
+```
+
+## Features
+
+- Authentication(Login/SignUp) with Google OAuth2.0 and Jason Web Token(JWT)
+- Create and update posts
+- Like and delete posts
+- View other users' posts
+- Display recommended posts that share the same tags
+- Pagination for limits posts on one page
+- Search functionality through tags/titles that users type in
+- Separating frontend and backend
+- Isolated server deployed on **AWS EC2**
+
+## Tack Stack
+
+**Frontend**
+
+- ReactJS, ES6
+- Material UI
+- Redux/Redux-Thunk for _state management_
+
+**Backend**
+
+- NodeJS
+- ExpressJS
+- Mongoose - _Node.js-based Object Data Modeling (ODM) library for MongoDB_
+- MongoDB Atlas
+- Nodemon for testing API endpoints
+
+**Cloud Service**
+
+- AWS EC2 for _running server_
+
+## Database Schema
+
+### Table: PostMessage
+
+**title**: String - Title of the post
+
+**message**: String - Message of the post
+
+**name**: String - Author of the post
+
+**creator**: String - _Unique ID_ of the author
+
+**tags**: String[ ] - tags of the post
+
+**selectedFile**: String - The uploaded image of the post by using Base64 encoding
+
+**likes**: String[ ] | default:[ ] - store the IDs of the users to display the number of likes of the post
+
+**comments**: String[ ] | default:[ ] - the comments of the post
+
+**createAt**: Date | default: new Date( ) - record the time-stamp once the post create
+
+### Table: User
+
+**name**: String - the name of the user, **required field**
+
+**email**: String - the email of the user, **required field**
+
+**password**: String - the password of the user, **required field**
+
+**id**: String - the ID of the user, **required field**
