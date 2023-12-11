@@ -57,6 +57,7 @@ CONNECTION_URL = "mongodb URL"
 - Pagination for limits posts on one page
 - Search functionality through tags/titles that users type in
 - Separating frontend and backend
+- Leave comments on posts
 - Isolated server deployed on **AWS EC2**
 
 ## Tack Stack
