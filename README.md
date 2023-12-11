@@ -43,18 +43,18 @@ npm install
 # Remember to change the port here
 PORT = "PORT"
 
-# Place your MondoDB connect URL here
+# Place your MongoDB connect URL here
 CONNECTION_URL = "mongodb URL"
 ```
 
 ## Features
 
 - Authentication(Login/SignUp) with Google OAuth2.0 and Jason Web Token(JWT)
-- Create and update posts
-- Like and delete posts
+- Create/Read/Update/Delete posts
+- Like posts
 - View other users' posts
 - Display recommended posts that share the same tags
-- Pagination for limits posts on one page
+- Pagination for limited posts on one page
 - Search functionality through tags/titles that users type in
 - Separating frontend and backend
 - Leave comments on posts
