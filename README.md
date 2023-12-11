@@ -79,6 +79,7 @@ CONNECTION_URL = "mongodb URL"
 **Cloud Service**
 
 - AWS EC2 for _running server_
+- GCP OAuth2.0 for _Google Login/SignUp_
 
 ## Database Schema
 
