@@ -9,9 +9,9 @@ Memories is a full-stack social media web application, where users can add/delet
 ## Content
 
 - [Installation](#Installation)
-- [.env-example](#.env-example)
+- [env example](#env-example)
 - [Features](#Features)
-- [Tack Stack](#Tack-Stack)
+- [Teck Stack](#Teck-Stack)
 - [Database Schema](#Database-Schema)
 
 ## Installation
@@ -35,7 +35,7 @@ Then use the package manager npm to install all needed packages.
 npm install
 ```
 
-## .env-example
+## env-example
 
 ```python
 # You can change your PORT for whatever you want on your local ex.5000
@@ -60,7 +60,7 @@ CONNECTION_URL = "mongodb URL"
 - Leave comments on posts
 - Isolated server deployed on **AWS EC2**
 
-## Tack Stack
+## Teck Stack
 
 **Frontend**
 
