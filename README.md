@@ -11,7 +11,7 @@ Memories is a full-stack social media web application, where users can add/delet
 - [Installation](#Installation)
 - [env example](#env-example)
 - [Features](#Features)
-- [Teck Stack](#Teck-Stack)
+- [Tech Stack](#Tech-Stack)
 - [Database Schema](#Database-Schema)
 
 ## Installation
@@ -60,7 +60,7 @@ CONNECTION_URL = "mongodb URL"
 - Leave comments on posts
 - Isolated server deployed on **AWS EC2**
 
-## Teck Stack
+## Tech Stack
 
 **Frontend**
 
