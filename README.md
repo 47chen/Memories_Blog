@@ -1,7 +1,8 @@
 # Memories
 
 Memories is a full-stack social media web application, where users can add/delete/update/like the posts and view others' posts.
-![User Interface](https://github.com/47chen/Memories_Blog/assets/44563581/285d9c97-de20-45d5-812b-e0ab5a31a6c0)
+![User-Interface](https://github.com/47chen/Memories_Blog/assets/44563581/285d9c97-de20-45d5-812b-e0ab5a31a6c0)
+![Post-Detail](https://github.com/47chen/Memories_Blog/assets/44563581/09ccc98d-e40e-47e1-af73-7f813e2036a9)
 
 ## Link
 
