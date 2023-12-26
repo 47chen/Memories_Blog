@@ -17,6 +17,7 @@ import Form from "../Form/Form";
 import useStyles from "../../styles";
 import Pagination from "../Pagination";
 
+// In order to use useQuery as a hook
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -29,9 +30,9 @@ const Home = () => {
 
   const query = useQuery();
   const navigate = useNavigate();
-  const page = query.get("page") || 1;
+  const page = query.get("page") || 1; // This is gonna read our URL and see if we have a page parameter in there
 
-  const searchQuery = query.get("searchQuery");
+  const searchQuery = query.get("searchQuery"); // // This is gonna read our URL and see if we have a searchQuery parameter in there
   const [search, setSearch] = useState("");
   const [tags, setTags] = useState([]);
 
