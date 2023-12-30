@@ -76,7 +76,7 @@ CONNECTION_URL = "mongodb URL"
 - ExpressJS
 - Mongoose - _Node.js-based Object Data Modeling (ODM) library for MongoDB_
 - MongoDB Atlas
-- Nodemon for testing API endpoints
+- Postman for testing API endpoints
 
 **Cloud Service**
 
