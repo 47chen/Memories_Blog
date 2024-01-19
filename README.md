@@ -6,7 +6,7 @@ Memories is a full-stack social media web application, where users can add/delet
 
 ## Link
 
-[Memories Live Site](https://655f892c12e90f1675d6c142--merry-crostata-197f9d.netlify.app/posts) currently deployed on Netlify.
+[Memories Live Site](https://655f892c12e90f1675d6c142--merry-crostata-197f9d.netlify.app/posts) currently deployed on Netlify. [Server(EC2) currently is down due to the free plan expired]
 
 ## Content
 
